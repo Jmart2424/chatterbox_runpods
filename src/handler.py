@@ -72,13 +72,12 @@ def handler(job):
         
         print(f"Audio generated successfully. Sample rate: {sample_rate}, Length: {len(audio_data)} samples")
         
+        # CHANGED: Return format for RunPod - NO nested "output" key
         return {
-            "output": {
-                "audio_base64": wav_base64,
-                "format": "wav",
-                "sample_rate": sample_rate,
-                "duration_seconds": len(audio_data) / sample_rate
-            }
+            "audio_base64": wav_base64,
+            "format": "wav",
+            "sample_rate": sample_rate,
+            "duration_seconds": len(audio_data) / sample_rate
         }
         
     except Exception as e:
