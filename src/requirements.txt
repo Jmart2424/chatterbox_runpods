@@ -1,0 +1,9 @@
+runpod
+scipy
+numpy
+torch
+torchaudio
+librosa
+huggingface_hub
+safetensors
+perth
